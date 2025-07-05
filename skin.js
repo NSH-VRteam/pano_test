@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: 
-// Generated 2025-07-05T12:13:40
+// Generated 2025-07-05T12:27:53
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_thumbnails', 2, false, { ignoreInState: 0  });
@@ -4145,8 +4145,8 @@ function pano2vrSkin(player,base) {
 		el.ggType='container';
 		hs ='';
 		hs+='height : 248px;';
-		hs+='left : 1768px;';
 		hs+='position : absolute;';
+		hs+='right : 52px;';
 		hs+='top : 310px;';
 		hs+='visibility : inherit;';
 		hs+='width : 100px;';
@@ -4171,7 +4171,7 @@ function pano2vrSkin(player,base) {
 		hs+='z-index: -1;';
 		hs+='background : #ffffff;';
 		hs+='border : 1px solid #000000;';
-		hs+='height : 350px;';
+		hs+='height : 525px;';
 		hs+='position : absolute;';
 		hs+='right : -2px;';
 		hs+='top : 10px;';
@@ -4494,16 +4494,18 @@ function pano2vrSkin(player,base) {
 		el.ggFilter = [];
 		el.ggFilter[0] = "1F_Rooms";
 		el.ggId="Cloner 2";
+		el.ggDx=0;
+		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_cloner ";
 		el.ggType='cloner';
 		hs ='';
 		hs+='height : 20px;';
-		hs+='left : 1022px;';
+		hs+='left : calc(50% - ((100px + 0px) / 2) + 0px);';
 		hs+='overflow : visible;';
 		hs+='position : absolute;';
-		hs+='top : 165px;';
+		hs+='top : calc(50% - ((20px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
 		hs+='width : 100px;';
 		hs+='pointer-events:none;';
