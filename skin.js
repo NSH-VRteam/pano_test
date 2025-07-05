@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: 
-// Generated 2025-07-05T11:52:44
+// Generated 2025-07-05T12:01:31
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_thumbnails', 2, false, { ignoreInState: 0  });
@@ -4158,17 +4158,18 @@ function pano2vrSkin(player,base) {
 		el=me.__1f_room_panel=document.createElement('div');
 		el.ggId="1F_room_Panel";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_rectangle ";
 		el.ggType='rectangle';
 		hs ='';
-		hs+='background : rgba(0,0,0,0.196078);';
+		hs+='z-index: -1;';
+		hs+='background : #ffffff;';
 		hs+='border : 1px solid #000000;';
 		hs+='height : 350px;';
 		hs+='position : absolute;';
 		hs+='right : -2px;';
 		hs+='top : 10px;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 150px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
@@ -4185,129 +4186,6 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me.__1f_room_panel.logicBlock_size = function() {
-			var newConditionsTrueSize = [];
-			var deltaW = 0;
-			var deltaH = 0;
-			if (
-				((player.getVariableValue('Room_P_height') == Number("10")))
-			)
-			{
-				newConditionsTrueSize.push(0);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("11")))
-			)
-			{
-				newConditionsTrueSize.push(1);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("12")))
-			)
-			{
-				newConditionsTrueSize.push(2);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("13")))
-			)
-			{
-				newConditionsTrueSize.push(3);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("14")))
-			)
-			{
-				newConditionsTrueSize.push(4);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("15")))
-			)
-			{
-				newConditionsTrueSize.push(5);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("9")))
-			)
-			{
-				newConditionsTrueSize.push(6);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("8")))
-			)
-			{
-				newConditionsTrueSize.push(7);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("7")))
-			)
-			{
-				newConditionsTrueSize.push(8);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("6")))
-			)
-			{
-				newConditionsTrueSize.push(9);
-			}
-			if (
-				((player.getVariableValue('Room_P_height') == Number("5")))
-			)
-			{
-				newConditionsTrueSize.push(10);
-			}
-			if (JSON.stringify(me.__1f_room_panel.ggConditionsTrueSize) != JSON.stringify(newConditionsTrueSize)) {
-				me.__1f_room_panel.ggConditionsTrueSize = newConditionsTrueSize;
-				me.__1f_room_panel.style.transition='width 0s, height 0s';
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(0)) {
-					deltaW += 0;
-					deltaH += 0;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(1)) {
-					deltaW += 0;
-					deltaH += 35;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(2)) {
-					deltaW += 0;
-					deltaH += 70;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(3)) {
-					deltaW += 0;
-					deltaH += 105;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(4)) {
-					deltaW += 0;
-					deltaH += 140;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(5)) {
-					deltaW += 0;
-					deltaH += 175;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(6)) {
-					deltaW += 0;
-					deltaH += -35;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(7)) {
-					deltaW += 0;
-					deltaH += -70;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(8)) {
-					deltaW += 0;
-					deltaH += -105;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(9)) {
-					deltaW += 0;
-					deltaH += -140;
-				}
-				if (me.__1f_room_panel.ggConditionsTrueSize.includes(10)) {
-					deltaW += 0;
-					deltaH += -175;
-				}
-					me.__1f_room_panel.style.width=(150+deltaW) + 'px';
-					me.__1f_room_panel.style.height=(350+deltaH) + 'px';
-					skin.updateSize(me.__1f_room_panel);
-			}
-		}
-		me.__1f_room_panel.logicBlock_size();
 		me.__1f_room_panel.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
@@ -4331,7 +4209,7 @@ function pano2vrSkin(player,base) {
 			}
 			if (me.__1f_room_panel.ggCurrentLogicStateVisible != newLogicStateVisible) {
 				me.__1f_room_panel.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me.__1f_room_panel.style.transition='width 0s, height 0s';
+				me.__1f_room_panel.style.transition='';
 				if (me.__1f_room_panel.ggCurrentLogicStateVisible == 0) {
 					me.__1f_room_panel.style.visibility=(Number(me.__1f_room_panel.style.opacity)>0||!me.__1f_room_panel.style.opacity)?'inherit':'hidden';
 					me.__1f_room_panel.ggVisible=true;
@@ -4341,8 +4219,8 @@ function pano2vrSkin(player,base) {
 					me.__1f_room_panel.ggVisible=false;
 				}
 				else {
-					me.__1f_room_panel.style.visibility=(Number(me.__1f_room_panel.style.opacity)>0||!me.__1f_room_panel.style.opacity)?'inherit':'hidden';
-					me.__1f_room_panel.ggVisible=true;
+					me.__1f_room_panel.style.visibility="hidden";
+					me.__1f_room_panel.ggVisible=false;
 				}
 			}
 		}
@@ -5170,7 +5048,6 @@ function pano2vrSkin(player,base) {
 			me._enlarge_map0.ggMarkerInstances=[];
 			me._enlarge_map0.ggSimpleFloorplanMarkerArray=[];
 		}
-		me.__1f_room_panel.logicBlock_size();
 		me.__1f_room_panel.logicBlock_visible();
 		player.addListener('changenode', function(event) {
 			me._rooms_button.logicBlock_alpha();
@@ -5253,7 +5130,6 @@ function pano2vrSkin(player,base) {
 				}
 			}
 			me._enlarge_map0.ggLastNodeId = id;
-			me.__1f_room_panel.logicBlock_size();
 			me.__1f_room_panel.logicBlock_visible();
 			me._cloner_1.ggUpdateConditionNodeChange();
 		});
@@ -5289,7 +5165,6 @@ function pano2vrSkin(player,base) {
 				me._enlarge_map0.ggInitMap(false);
 				me._enlarge_map0.ggInitMapMarkers(true);
 			}
-			me.__1f_room_panel.logicBlock_size();
 			me.__1f_room_panel.logicBlock_visible();
 		});
 		player.addListener('hastouch', function(event) {
@@ -5336,9 +5211,6 @@ function pano2vrSkin(player,base) {
 			for (var i=0; i < me._enlarge_map0.ggMarkerInstances.length; i++) {
 				me._enlarge_map0.ggMarkerInstances[i].ggEvent_varchanged_Map_Pin_active_E();
 			}
-		});
-		player.addListener('varchanged_Room_P_height', function(event) {
-			me.__1f_room_panel.logicBlock_size();
 		});
 		player.addListener('varchanged_Room_visibility_1F', function(event) {
 			me.__1f_room_panel.logicBlock_visible();
@@ -5412,8 +5284,9 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
+		hs+='z-index: 0;';
 		hs+='border : 0px solid #000000;';
-		hs+='color : rgba(255,255,255,1);';
+		hs+='color : rgba(0,0,0,1);';
 		hs+='height : 35px;';
 		hs+='left : calc(50% - ((150px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
@@ -6232,7 +6105,7 @@ me._map_pin_active.style.transform=hs; });
 			}
 		}
 		me._ht_node.onclick=function (e) {
-			player.openNext(player._(me.hotspot.url),player._(me.hotspot.target));
+			player.openNext(player._(me.hotspot.url),"$(cur)");
 			player.triggerEvent('hsproxyclick', {'id': me.hotspot.id, 'url': me.hotspot.url});
 		}
 		me._ht_node.ondblclick=function (e) {
